@@ -2,11 +2,11 @@ import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import TabsNavigation from '../components/TabsNavigation';
 
-const Home = ({navigation}) => {
+const Listado = ({navigation}) => {
   return (
     <>
       <View style={styles.container}>
-        <Text>Inicio</Text>
+        <Text>Listado</Text>
       </View>
       <TabsNavigation navigation={navigation} />
     </>
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Listado;
