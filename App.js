@@ -9,13 +9,20 @@ import Home from './src/views/Home';
 
 const Stack = createNativeStackNavigator();
 
+const token = '';
+
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
+      {token !== '' ? (
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+      ) : (
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+        </Stack.Navigator>
+      )}
     </NavigationContainer>
   );
 };
